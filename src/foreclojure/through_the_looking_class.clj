@@ -1,3 +1,5 @@
+(ns forclojure.core)
+
 ;; Enter a value which satisfies the following:
 
 ;; (let [x __]
