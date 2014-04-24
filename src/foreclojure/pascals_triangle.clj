@@ -25,15 +25,18 @@
 
 ;; Mine:
 
-(fn [n] (nth (iterate #(vec (flatten [1
-                                      (for [[x y] (partition 2 1 %)] (+ x y))
-                                      1]))
-                      [1])
-             (- n 1)))
+(defn pascal [n] (nth
+                  (iterate
+                   #(vec
+                     (flatten [1
+                               (for [[x y] (partition 2 1 %)] (+ x y))
+                               1]))
+                   [1])
+                  (- n 1)))
 
 ;; Other's:
 
-(fn [i]
-  (reduce
-   #(conj %1 (* (last %1) (/ (- i %2) %2)))
-   [1] (range 1 i)))
+;; (fn [i]
+;;   (reduce
+;;    #(conj %1 (* (last %1) (/ (- i %2) %2)))
+;;    [1] (range 1 i)))

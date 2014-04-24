@@ -18,7 +18,7 @@
 
 ;; Mine (ugly):
 
-(fn [& xs]
+(defn infix [& xs]
   (loop [result 0
          f nil
          x (first xs)
@@ -41,7 +41,7 @@
 
 ;; Other's (nice):
 
-(fn [& xs]
-  (reduce #((first %2) %1 (last %2))
-          (first xs)
-          (partition 2 (rest xs))))
+;; (fn [& xs]
+;;   (reduce #((first %2) %1 (last %2))
+;;           (first xs)
+;;           (partition 2 (rest xs))))
