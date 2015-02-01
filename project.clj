@@ -7,4 +7,5 @@
                  [org.thnetos/cd-client "0.3.4"]]
   :main ^:skip-aot foreclojure.core
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}})
+  :profiles {:uberjar {:aot :all}}
+  :plugins [[cider/cider-nrepl "0.8.2"]])
