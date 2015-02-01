@@ -1,14 +1,16 @@
 (ns foreclojure.core)
 
-;; Create a function that computes the dot product of two sequences.
-;; You may assume that the vectors will have the same length.
+; Create a function that computes the dot product of two sequences. You may
+; assume that the vectors will have the same length.
 
-;; (= 0 (__ [0 1 0] [1 0 0]))
+(defn dot-product [s1 s2] (reduce + (map * s1 s2)))
 
-;; (= 3 (__ [1 1 1] [1 1 1]))
+; Tests ...
 
-;; (= 32 (__ [1 2 3] [4 5 6]))
+(= 0 (dot-product [0 1 0] [1 0 0]))
 
-;; (= 256 (__ [2 5 6] [100 10 1]))
+(= 3 (dot-product [1 1 1] [1 1 1]))
 
-(defn [s1 s2] (reduce + (map * s1 s2)))
+(= 32 (dot-product [1 2 3] [4 5 6]))
+
+(= 256 (dot-product [2 5 6] [100 10 1]))
