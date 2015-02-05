@@ -8,4 +8,5 @@
   :main ^:skip-aot foreclojure.core
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}}
-  :plugins [[cider/cider-nrepl "0.8.2"]])
+  :plugins [[cider/cider-nrepl "0.8.2"]
+            [lein-cljfmt  "0.1.6"]])
