@@ -1,4 +1,4 @@
-(ns forclojure.core)
+(ns foreclojure.core)
 
 ;; Enter a value which satisfies the following:
 

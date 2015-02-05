@@ -21,11 +21,11 @@
 (defn lcm [& xs]
   (reduce
    #(/ (* %1 %2)
-      (loop [a %1 b %2]
-        (cond
-         (= a b) a
-         (> a b) (recur (- a b) b)
-         :else (recur a (- b a)))))
+       (loop [a %1 b %2]
+         (cond
+           (= a b) a
+           (> a b) (recur (- a b) b)
+           :else (recur a (- b a)))))
    xs))
 
 ;; Other's:
@@ -33,3 +33,4 @@
 (fn [& xs]
   (/ (apply * xs)
      (reduce #(if (zero? %2) % (recur %2 (mod % %2))) xs)))
+

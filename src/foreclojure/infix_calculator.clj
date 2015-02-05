@@ -24,20 +24,20 @@
          x (first xs)
          more (rest xs)]
     (cond
-     (nil? x) result
-     (number? x) (if f
-                   (recur (f result x)
-                          nil
-                          (first more)
-                          (rest more))
-                   (recur x
-                          nil
-                          (first more)
-                          (rest more)))
-     :else (recur result
-                  x
-                  (first more)
-                  (rest more)))))
+      (nil? x) result
+      (number? x) (if f
+                    (recur (f result x)
+                           nil
+                           (first more)
+                           (rest more))
+                    (recur x
+                           nil
+                           (first more)
+                           (rest more)))
+      :else (recur result
+                   x
+                   (first more)
+                   (rest more)))))
 
 ;; Other's (nice):
 
@@ -45,3 +45,4 @@
 ;;   (reduce #((first %2) %1 (last %2))
 ;;           (first xs)
 ;;           (partition 2 (rest xs))))
+

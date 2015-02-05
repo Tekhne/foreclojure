@@ -1,4 +1,4 @@
-(ns forclojure.core)
+(ns foreclojure.core)
 
 ;; Transform a sequence into a sequence of pairs containing the
 ;; original elements along with their index.

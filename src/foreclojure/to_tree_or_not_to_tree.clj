@@ -29,8 +29,8 @@
 
 (defn binary-tree? [s]
   (cond
-   (not (= 3 (count s))) false
-   (coll? (first s)) false
-   :else (every?
-          #(or (nil? %) (and (coll? %) (binary-tree? %)))
-          (rest s))))
+    (not (= 3 (count s))) false
+    (coll? (first s)) false
+    :else (every?
+           #(or (nil? %) (and (coll? %) (binary-tree? %)))
+           (rest s))))
